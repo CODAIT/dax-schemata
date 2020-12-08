@@ -15,8 +15,136 @@
 #
 
 api_name: com.ibm.pydax.v1
-last_updated: 2020-10-08
+last_updated: 2020-12-07
 datasets:
+  airline:
+    "1.0.0":
+      name: Airline Reporting Carrier On-Time Performance Dataset
+      published: 2020-06-25
+      homepage: https://developer.ibm.com/exchanges/data/all/airline/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-airline/1.0.1/airline.tar.gz
+      sha512sum: ba7f50e20fa4824e9422b901ac23f9487f1e408bbdf8af7c0fce092212090ba036966b3dc9fb4c1a8beeb1498fa595318c1d94cbac96aa18f2259609de82e0c8
+      license: cdla_sharing
+      estimated_size: 81G
+      description: "The Reporting Carrier On-Time Performance Dataset contains information on approximately 200 million domestic US flights reported to the United States Bureau of Transportation Statistics. The dataset contains basic information about each flight (such as date, time, departure airport, arrival airport) and, if applicable, the amount of time the flight was delayed and information about the reason for the delay. This dataset can be used to predict the likelihood of a flight arriving on time."
+      subdatasets:
+        full:
+          name: Complete Airline Reporting Carrier On-Time Performance Dataset
+          description: Complete dataset
+          format:
+            id: csv
+          options:
+            columns:
+              Year: 'int'
+              Quarter: 'int'
+              Month: 'int'
+              DayofMonth: 'int'
+              DayOfWeek: 'int'
+              FlightDate: 'datetime'
+              Reporting_Airline: 'string'
+              DOT_ID_Reporting_Airline: 'string'
+              IATA_CODE_Reporting_Airline: 'string'
+              Tail_Number: 'string'
+              Flight_Number_Reporting_Airline: 'string'
+              OriginAirportID: 'string'
+              OriginAirportSeqID: 'string'
+              OriginCityMarketID: 'string'
+              Origin: 'string'
+              OriginCityName: 'string'
+              OriginState: 'string'
+              OriginStateFips: 'string'
+              OriginStateName: 'string'
+              OriginWac: 'string'
+              DestAirportID: 'string'
+              DestAirportSeqID: 'string'
+              DestCityMarketID: 'string'
+              Dest: 'string'
+              DestCityName: 'string'
+              DestState: 'string'
+              DestStateFips: 'string'
+              DestStateName: 'string'
+              DestWac: 'string'
+              CRSDepTime: 'datetime'
+              DepTime: 'datetime'
+              DepDelay: 'int'
+              DepDelayMinutes: 'int' 
+              DepDel15: 'boolean'
+              DepartureDelayGroups: 'int'
+              DepTimeBlk: 'string'
+              TaxiOut: 'int'
+              WheelsOff: 'datetime'
+              WheelsOn: 'datetime'
+              TaxiIn: 'int'
+              CRSArrTime: 'datetime'
+              ArrTime: 'datetime'
+              ArrDelay: 'int'
+              ArrDelayMinutes: 'int'
+              ArrDel15: 'boolean'
+              ArrivalDelayGroups: 'int'
+              ArrTimeBlk: 'string'
+              Cancelled: 'boolean'
+              CancellationCode: 'string'
+              Diverted: 'boolean'
+              CRSElapsedTime: 'int'
+              ActualElapsedTime: 'int'
+              AirTime: 'int'
+              Flights: 'int'
+              Distance: 'int'
+              DistanceGroup: 'int'
+              CarrierDelay: 'int'
+              WeatherDelay: 'int'
+              NASDelay: 'int'
+              SecurityDelay: 'int'
+              LateAircraftDelay: 'int'
+              FirstDepTime: 'datetime'
+              TotalAddGTime: 'int'
+              LongestAddGTime: 'int'
+              DivAirportLandings: 'int'
+              DivReachedDest: 'bool'
+              DivActualElapsedTime: 'int'
+              DivArrDelay: 'int'
+              DivDistance: 'int'
+              Div1Airport: 'string'
+              Div1AirportID: 'string'
+              Div1AirportSeqID: 'string'
+              Div1WheelsOn: 'datetime'
+              Div1TotalGTime: 'int'
+              Div1LongestGTime: 'int'
+              Div1WheelsOff: 'datetime'
+              Div1TailNum: 'string'
+              Div2Airport: 'string'
+              Div2AirportID: 'string'
+              Div2AirportSeqID: 'string'
+              Div2WheelsOn: 'datetime'
+              Div2TotalGTime: 'int'
+              Div2LongestGTime: 'int'
+              Div2WheelsOff: 'datetime'
+              Div2TailNum: 'string'
+              Div3Airport: 'string'
+              Div3AirportID: 'string'
+              Div3AirportSeqID: 'string'
+              Div3WheelsOn: 'datetime'
+              Div3TotalGTime: 'int'
+              Div3LongestGTime: 'int'
+              Div3WheelsOff: 'datetime'
+              Div3TailNum: 'string'
+              Div4Airport: 'string'
+              Div4AirportID: 'string'
+              Div4AirportSeqID: 'string'
+              Div4WheelsOn: 'datetime'
+              Div4TotalGTime: 'int'
+              Div4LongestGTime: 'int'
+              Div4WheelsOff: 'datetime'
+              Div4TailNum: 'string'
+              Div5Airport: 'string'
+              Div5AirportID: 'string'
+              Div5AirportSeqID: 'string'
+              Div5WheelsOn: 'datetime'
+              Div5TotalGTime: 'int'
+              Div5LongestGTime: 'int'
+              Div5WheelsOff: 'int'
+              Div5TailNum: 'int'
+          path: airline.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
