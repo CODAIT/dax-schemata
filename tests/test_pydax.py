@@ -35,10 +35,14 @@ with open('datasets.yaml') as f:
 # Datasets name are the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
 # test.
 assert frozenset(datasets['datasets']) == frozenset(pydax.list_all_datasets())
+# Sanity check. In case of all tests being skipped because of a minor error such as in formatting.
+assert len(pydax.list_all_datasets()) > 0
 
 for name, versions in pydax.list_all_datasets().items():
     # Versions must be the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
     # test.
     assert frozenset(datasets['datasets'][name]) == frozenset(versions)
+    # Sanity check. In case of all tests being skipped because of a minor error such as in formatting.
+    assert len(versions) > 0
     for version in versions:
         pydax.load_dataset(name=name, version=version, subdatasets=None)
