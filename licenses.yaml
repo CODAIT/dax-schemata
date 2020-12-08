@@ -37,3 +37,8 @@ licenses:
     commercial_use: true
     copyleft: false
     url: https://creativecommons.org/licenses/by/3.0/
+  cc_by_sa_30:
+    name: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+    commercial_use: true
+    copyleft: false
+    url: https://creativecommons.org/licenses/by-sa/3.0/
