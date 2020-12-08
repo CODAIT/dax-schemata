@@ -18,6 +18,8 @@
 
 # This scripts tests all files in CODAIT/dax-schemata. It shouldn't report any error.
 
+import yaml
+
 import pydax
 
 
@@ -27,6 +29,16 @@ pydax.init(
     DEFAULT_LICENSE_SCHEMA_URL='https://raw.githubusercontent.com/CODAIT/dax-schemata/master/licenses.yaml'
 )
 
+with open('datasets.yaml') as f:
+    datasets = yaml.safe_load(f)
+
+# Datasets name are the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
+# test.
+assert frozenset(datasets['datasets']) == frozenset(pydax.list_all_datasets())
+
 for name, versions in pydax.list_all_datasets().items():
+    # Versions must be the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
+    # test.
+    assert frozenset(datasets['datasets'][name]) == frozenset(versions)
     for version in versions:
         pydax.load_dataset(name=name, version=version, subdatasets=None)
