@@ -42,7 +42,7 @@ datasets:
                 suffix: 'string'
                 prefix: 'string'
                 url: 'string'
-          path: claim-sentences-search/q_mc_train.csv
+          path: q_mc_train.csv
         heldout:
           name: MC Query Heldout
           description: Heldout set containing sentences retrieved by MC query
@@ -57,7 +57,7 @@ datasets:
                 suffix: 'string'
                 prefix: 'string'
                 url: 'string'
-          path: claim-sentences-search/q_mc_heldout.csv
+          path: q_mc_heldout.csv
         test:
           name: MC Query Test
           description: Test set containing sentences retrieved by MC query
@@ -72,7 +72,7 @@ datasets:
                 suffix: 'string'
                 prefix: 'string'
                 url: 'string'
-          path: claim-sentences-search/q_mc_test.csv
+          path: q_mc_test.csv
         dnn_test:
           name: DNN Test
           description: Dataset containing DNN score of each sentence and its gold label
@@ -88,7 +88,7 @@ datasets:
                 score: 'float'
                 label: 'boolean'
                 url: 'string'
-          path: claim_sentences_search/test_set.csv
+          path: test_set.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
