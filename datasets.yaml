@@ -17,6 +17,78 @@
 api_name: com.ibm.pydax.v1
 last_updated: 2020-10-08
 datasets:
+  claim_sentences_search:
+    "1.0.2":
+      name: IBM Debater® Claim Sentences Search
+      published: 2019-08-19
+      homepage: https://developer.ibm.com/exchanges/data/all/claim-sentences-search/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-claim-sentences-search/1.0.2/claim-sentences-search.tar.gz
+      sha512sum: ca075c45338ab261d11d60bcd11bd52041f68078a3be617171caaf6291c24a72535500706be7be3b4b1dea5d93f7e1d739e4393de0fdeba7eacd019e9f70171b
+      license: cc_by_sa_30
+      estimated_size: 571M
+      description: "Claims are short phrases that an argument aims to prove. The goal of the Claim Sentence Search task is to detect sentences containing claims in a large corpus, given a debatable topic or motion. The dataset contains results of the q_mc query – sentences containing a certain topic, as described in the paper – containing 1.49M sentences. In addition, the dataset contains a claim sentence test set containing 2.5k top predicted sentences of our model, along with their labels. The sentences were retrieved from Wikipedia 2017."
+      subdatasets:
+        train:
+          name: MC Query Train
+          description: Training set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: claim-sentences-search/q_mc_train.csv
+        heldout:
+          name: MC Query Heldout
+          description: Heldout set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: claim-sentences-search/q_mc_heldout.csv
+        test:
+          name: MC Query Test
+          description: Test set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: claim-sentences-search/q_mc_test.csv
+        dnn_test:
+          name: DNN Test
+          description: Dataset containing DNN score of each sentence and its gold label
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                query_pattern: 'string'
+                score: 'float'
+                label: 'boolean'
+                url: 'string'
+          path: claim_sentences_search/test_set.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
