@@ -17,6 +17,44 @@
 api_name: com.ibm.pydax.v1
 last_updated: 2020-10-08
 datasets:
+  concept_abstractness:
+    "1.0.2":
+      name: IBM Debater® Concept Abstractness
+      published: 2019-07-29
+      homepage: https://developer.ibm.com/exchanges/data/all/concept-abstractness/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-concept-abstractness/1.0.2/concept-abstractness.tar.gz
+      sha512sum: 25cb76c0a8fdfc9cae7e050d4c2492bf055f97a20fa85690b9aaf7dcf965a705fc89e32aed7fbb6d418432e5368cb06fc3bb0f1ab85807fec8aef9df3965cc06 
+      license: cc_by_sa_30
+      estimated_size: 3.6M
+      description: "A set of concepts from Wikipedia rated for their degree of abstractness."
+      subdatasets:
+        unigrams:
+          name: Unigrams
+          description: "Unigram Wikipedia Article Titles with their abstractness score"
+          format: csv
+          options:
+            columns:
+              Concept: 'string'
+              Score: 'float'
+          path: concept_abstractness/prediction_unigrams.csv
+        bigrams:
+          name: Bigrams
+          description: "Bigram Wikipedia Article Titles with their abstractness score"
+          format: csv
+          options:
+            columns:
+              Concept: 'string'
+              Score: 'float'
+          path: concept_abstractness/prediction_bigrams.csv
+        trigrams:
+          name: Trigrams
+          description: "Trigram Wikipedia Article Titles with their abstractness score"
+          format: csv
+          options:
+            columns:
+              Concept: 'string'
+              Score: 'float'
+          path: concept_abstractness/prediction_trigrams.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
@@ -79,3 +117,114 @@ datasets:
               columns:
                 DATE: 'date'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
+  sentiment_compositions_lexicon:
+    "1.0.2":
+      name: IBM Debater® Sentiment Compositions Lexicon
+      published: 2019-10-01
+      homepage: https://developer.ibm.com/exchanges/data/all/sentiment-composition-lexicons/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-sentiment-composition-lexicons/1.0.2/sentiment-composition-lexicons.tar.gz
+      sha512sum: 550da933b668270d890a4e12160202671894c357927e52250500e97b78965d7f3d4506396f9f21f50683a2fc54a4af5922f7fdd0ac7f01e4b5a2f1068451a519
+      license: cc_by_sa_30
+      estimated_size: 10M
+      description: "A dataset on the sentiment of phrases from the interaction between its constituents."
+      subdatasets:
+        unigrams:
+          name: Unigrams Sentiment Lexicon
+          description: Unigrams with their sentiment score
+          format:
+            id: txt
+            options:
+              columns:
+                UNIGRAM: 'string'
+                SENTIMENT_SCORE: 'float'
+          path: sentiment_compositions_lexicon/LEXICON_UG.txt
+        bigrams:
+          name: Bigrams Sentiment Lexicon
+          description: Bigrams with their POS tag and sentiment score
+          format:
+            id: txt
+            options:
+              columns:
+                BIGRAM: 'string'
+                POS_TAG: 'string'
+                SENTIMENT_SCORE: 'float'
+          path: sentiment_compositions_lexicon/LEXICON_BG.txt
+        semantic_classes:
+          name: Semantic Classes
+          description: The composition lexicons for reversers, propagators, and dominators
+          format:
+            id: xslx
+            options:
+              columns:
+                class: 'string'
+          path: sentiment_compositions_lexicon/SEMANTIC_CLASSES.xlsx
+  thematic_clustering_of_sentences:
+    "1.0.2":
+      name: IBM Debater® Thematic Clustering of Sentences
+      published: 2019-08-01
+      homepage: https://developer.ibm.com/exchanges/data/all/thematic-clustering-of-sentences/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-thematic-clustering-of-sentences/1.0.2/thematic-clustering-of-sentences.tar.gz
+      sha512sum: 08a3f1a9dc06083eb51874e90d7241f67b676af2cbc28fe6a312694051f53391fc95de70fdcdce404de3578fa389558220ea38d34f70265ed88220d0b14f1aba
+      estimated_size: 10.6M
+      description: "A benchmark of sentence-clustering based on the partition of Wikipedia articles into sections."
+      subdatasets:
+        full:
+          name: IBM Debater® Thematic Clustering of Sentences
+          description: IBM Debater® Thematic Clustering of Sentences complete dataset
+          format:
+            id: csv
+            options:
+              columns:
+                article_title: 'string'
+                sentence: 'string'
+                cluster_title: 'string'
+                article_link: 'string'
+          path: thematic-clustering-of-sentences/dataset.csv
+  wikipedia_category_stance:
+    "1.0.2":
+      name: IBM Debater® Wikipedia Category Stance
+      published: 2019-08-01
+      homepage: https://developer.ibm.com/exchanges/data/all/wikipedia-category-stance/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikipedia-category-stance/1.0.2/wikipedia-category-stance.tar.gz
+      sha512sum: a8e056737699a5a52ef5b7bd91f13f9a672e091b7636010cdcc0ba9d34c322dd761c50bdda01fe988ed6650470f9410ef9f8789e54c4d90124606f7a889f57b4
+      license: cc_by_30
+      estimated_size: 525K
+      description: "Wikipedia categories and lists annotated for stance (Pro/Con) towards the concepts"
+      subdatasets:
+        full:
+          name: IBM Debater® Wikipedia Category Stance Dataset
+          description: IBM Debater® Wikipedia Category Stance complete dataset
+          format:
+            id: csv
+            options:
+              columns:
+                Label: 'string'
+                Concept: 'string'
+                Category: 'string'
+                URL: 'string'
+          path: wikipedia_category_stance/WikipediaCategoriesResults.csv
+  wikipedia_oriented_relatedness:
+    "1.0.2":
+      name: IBM Debater® Wikipedia Oriented Relatedness
+      published: 2019-08-01
+      homepage: https://developer.ibm.com/exchanges/data/all/wikipedia-oriented-relatedness/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikipedia-oriented-relatedness/1.0.2/wikipedia-oriented-relatedness.tar.gz
+      sha512sum: 270f0bb4711acff8f88e9ce10403a72ce13b8ad21205f61d41c17c520b1d30bccefcd2312db92c80ec525a8e8a926b2ff77f58d1e95efb0b17b945c8f5de4e7f
+      license: cc_by_sa_30
+      estimated_size: 3.4M
+      description: "Pairs of concepts from Wikipedia scored for their level of relatedness."
+      subdatasets:
+        full: 
+          name: IBM Debater® Wikipedia Oriented Relatedness complete dataset
+          format:
+            id: csv
+            options:
+              columns:
+                source_article_uri: 'string'
+                concept_1: 'string'
+                concept_2: 'string'
+                score: 'float'
+                concept_1_uri: 'string'
+                concept_2_uri: 'string'
+                train_test: 'string'
+          path: wikipedia_oriented_relatedness/WORD.csv
