@@ -24,9 +24,9 @@ import pydax
 
 
 pydax.init(
-    DEFAULT_DATASET_SCHEMA_URL='https://raw.githubusercontent.com/CODAIT/dax-schemata/master/datasets.yaml',
-    DEFAULT_FORMAT_SCHEMA_URL='https://raw.githubusercontent.com/CODAIT/dax-schemata/master/formats.yaml',
-    DEFAULT_LICENSE_SCHEMA_URL='https://raw.githubusercontent.com/CODAIT/dax-schemata/master/licenses.yaml'
+    DEFAULT_DATASET_SCHEMA_URL='datasets.yaml',
+    DEFAULT_FORMAT_SCHEMA_URL='formats.yaml',
+    DEFAULT_LICENSE_SCHEMA_URL='licenses.yaml'
 )
 
 with open('datasets.yaml') as f:
