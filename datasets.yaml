@@ -23,7 +23,7 @@ datasets:
       published: 2019-07-29
       homepage: https://developer.ibm.com/exchanges/data/all/concept-abstractness/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-concept-abstractness/1.0.2/concept-abstractness.tar.gz
-      sha512sum: 25cb76c0a8fdfc9cae7e050d4c2492bf055f97a20fa85690b9aaf7dcf965a705fc89e32aed7fbb6d418432e5368cb06fc3bb0f1ab85807fec8aef9df3965cc06 
+      sha512sum: 25cb76c0a8fdfc9cae7e050d4c2492bf055f97a20fa85690b9aaf7dcf965a705fc89e32aed7fbb6d418432e5368cb06fc3bb0f1ab85807fec8aef9df3965cc06
       license: cc_by_sa_30
       estimated_size: 3.6M
       description: "A set of concepts from Wikipedia rated for their degree of abstractness."
@@ -214,7 +214,7 @@ datasets:
       estimated_size: 3.4M
       description: "Pairs of concepts from Wikipedia scored for their level of relatedness."
       subdatasets:
-        full: 
+        full:
           name: IBM Debater® Wikipedia Oriented Relatedness complete dataset
           format:
             id: csv
