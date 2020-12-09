@@ -36,7 +36,7 @@ datasets:
             columns:
               Concept: 'string'
               Score: 'float'
-          path: concept_abstractness/prediction_unigrams.csv
+          path: prediction_unigrams.csv
         bigrams:
           name: Bigrams
           description: "Bigram Wikipedia Article Titles with their abstractness score"
@@ -45,7 +45,7 @@ datasets:
             columns:
               Concept: 'string'
               Score: 'float'
-          path: concept_abstractness/prediction_bigrams.csv
+          path: prediction_bigrams.csv
         trigrams:
           name: Trigrams
           description: "Trigram Wikipedia Article Titles with their abstractness score"
@@ -54,7 +54,7 @@ datasets:
             columns:
               Concept: 'string'
               Score: 'float'
-          path: concept_abstractness/prediction_trigrams.csv
+          path: prediction_trigrams.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
@@ -137,7 +137,7 @@ datasets:
               columns:
                 UNIGRAM: 'string'
                 SENTIMENT_SCORE: 'float'
-          path: sentiment_compositions_lexicon/LEXICON_UG.txt
+          path: LEXICON_UG.txt
         bigrams:
           name: Bigrams Sentiment Lexicon
           description: Bigrams with their POS tag and sentiment score
@@ -148,16 +148,7 @@ datasets:
                 BIGRAM: 'string'
                 POS_TAG: 'string'
                 SENTIMENT_SCORE: 'float'
-          path: sentiment_compositions_lexicon/LEXICON_BG.txt
-        semantic_classes:
-          name: Semantic Classes
-          description: The composition lexicons for reversers, propagators, and dominators
-          format:
-            id: xslx
-            options:
-              columns:
-                class: 'string'
-          path: sentiment_compositions_lexicon/SEMANTIC_CLASSES.xlsx
+          path: LEXICON_BG.txt
   thematic_clustering_of_sentences:
     "1.0.2":
       name: IBM Debater® Thematic Clustering of Sentences
@@ -179,7 +170,7 @@ datasets:
                 sentence: 'string'
                 cluster_title: 'string'
                 article_link: 'string'
-          path: thematic-clustering-of-sentences/dataset.csv
+          path: dataset.csv
   wikipedia_category_stance:
     "1.0.2":
       name: IBM Debater® Wikipedia Category Stance
@@ -202,7 +193,7 @@ datasets:
                 Concept: 'string'
                 Category: 'string'
                 URL: 'string'
-          path: wikipedia_category_stance/WikipediaCategoriesResults.csv
+          path: WikipediaCategoriesResults.csv
   wikipedia_oriented_relatedness:
     "1.0.2":
       name: IBM Debater® Wikipedia Oriented Relatedness
@@ -219,6 +210,7 @@ datasets:
           format:
             id: csv
             options:
+              encoding: 'ISO-8859-1'
               columns:
                 source_article_uri: 'string'
                 concept_1: 'string'
@@ -227,4 +219,4 @@ datasets:
                 concept_1_uri: 'string'
                 concept_2_uri: 'string'
                 train_test: 'string'
-          path: wikipedia_oriented_relatedness/WORD.csv
+          path: WORD.csv
