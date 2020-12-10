@@ -109,7 +109,7 @@ datasets:
               columns:
                 Sequence: 'string'
                 Adjudication: 'string'
-          path: expert-in-the-loop-ai-polymer-discovery/EITLAI_CyclicLactones_ROP_v1.csv 
+          path: expert-in-the-loop-ai-polymer-discovery/EITLAI_CyclicLactones_ROP_v1.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
