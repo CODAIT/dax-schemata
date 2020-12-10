@@ -89,6 +89,27 @@ datasets:
                 label: 'boolean'
                 url: 'string'
           path: test_set.csv
+  expert-in-the-loop-ai-polymer-discovery:
+    "1.0.0":
+      name: Expert in the Loop AI – Polymer Discovery
+      published: 2020-06-15
+      homepage: https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-expert-in-the-loop-ai-polymer-discovery/1.0.0/expert-in-the-loop-ai-polymer-discovery.tar.gz
+      sha512sum: a87db5c8a30288fd2dc41c1189125378c0700035f7c3a2ca6c71bfbc4b955c15f2bb4f955d2b4a3e95b06ee3719fbd1082c79b299cf688da7af6baedb333de4c
+      license: cdla_sharing
+      estimated_size: 14M
+      description: "Candidate monomers for ring-opening polymerization adjudicated/labelled for workability."
+      subdatasets:
+        full:
+          name: Expert in the Loop AI Full Dataset
+          description: Full version of the Expert in the Loop AI dataset.
+          format:
+            id: csv
+            options:
+              columns:
+                Sequence: 'string'
+                Adjudication: 'string'
+          path: expert-in-the-loop-ai-polymer-discovery/EITLAI_CyclicLactones_ROP_v1.csv 
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
