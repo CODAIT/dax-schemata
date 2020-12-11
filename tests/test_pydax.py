@@ -45,4 +45,6 @@ for name, versions in pydax.list_all_datasets().items():
     # Sanity check. In case of all tests being skipped because of a minor error such as in formatting.
     assert len(versions) > 0
     for version in versions:
+        # Print dataset info. This also examines relevant portion in license.yaml
+        print(pydax.get_dataset_metadata(name, version, human=True), end='\n\n')
         pydax.load_dataset(name=name, version=version, subdatasets=None)
