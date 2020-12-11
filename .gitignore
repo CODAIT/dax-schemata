@@ -1,0 +1,5 @@
+### vscode ###
+.vscode/
+
+### tox ###
+.tox/
