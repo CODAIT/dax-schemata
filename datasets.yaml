@@ -149,5 +149,5 @@ datasets:
             id: csv
             options:
               columns:
-                DATE: 'date'
+                DATE: 'datetime'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
