@@ -132,8 +132,9 @@ datasets:
           name: Unigrams Sentiment Lexicon
           description: Unigrams with their sentiment score
           format:
-            id: txt
+            id: csv
             options:
+              delimiter: ' '
               columns:
                 UNIGRAM: 'string'
                 SENTIMENT_SCORE: 'float'
@@ -142,8 +143,9 @@ datasets:
           name: Bigrams Sentiment Lexicon
           description: Bigrams with their POS tag and sentiment score
           format:
-            id: txt
+            id: csv
             options:
+              delimiter: ' '
               columns:
                 BIGRAM: 'string'
                 POS_TAG: 'string'
