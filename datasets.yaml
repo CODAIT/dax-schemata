@@ -17,6 +17,78 @@
 api_name: com.ibm.pydax.v1
 last_updated: 2020-10-08
 datasets:
+  claim_sentences_search:
+    "1.0.2":
+      name: IBM Debater® Claim Sentences Search
+      published: 2019-08-19
+      homepage: https://developer.ibm.com/exchanges/data/all/claim-sentences-search/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-claim-sentences-search/1.0.2/claim-sentences-search.tar.gz
+      sha512sum: ca075c45338ab261d11d60bcd11bd52041f68078a3be617171caaf6291c24a72535500706be7be3b4b1dea5d93f7e1d739e4393de0fdeba7eacd019e9f70171b
+      license: cc_by_sa_30
+      estimated_size: 571M
+      description: "Sentences from Wikipedia together with their topic."
+      subdatasets:
+        train:
+          name: MC Query Train
+          description: Training set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: q_mc_train.csv
+        heldout:
+          name: MC Query Heldout
+          description: Heldout set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: q_mc_heldout.csv
+        test:
+          name: MC Query Test
+          description: Test set containing sentences retrieved by MC query
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                suffix: 'string'
+                prefix: 'string'
+                url: 'string'
+          path: q_mc_test.csv
+        dnn_test:
+          name: DNN Test
+          description: Dataset containing DNN score of each sentence and its gold label
+          format:
+            id: csv
+            options:
+              columns:
+                id: 'string'
+                topic: 'string'
+                mc: 'string'
+                sentence: 'string'
+                query_pattern: 'string'
+                score: 'float'
+                label: 'boolean'
+                url: 'string'
+          path: test_set.csv
   concept_abstractness:
     "1.0.2":
       name: IBM Debater® Concept Abstractness
@@ -115,7 +187,7 @@ datasets:
             id: csv
             options:
               columns:
-                DATE: 'date'
+                DATE: 'datetime'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
   sentiment_compositions_lexicon:
     "1.0.2":
