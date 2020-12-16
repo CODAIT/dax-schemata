@@ -219,9 +219,10 @@ datasets:
           format:
             id: csv
             options:
-              WELL_NAME: 'string'
-              LAT: 'float'
-              LONG: 'float'
-              X: 'float'
-              Y: 'float'
+              columns:
+                WELL_NAME: 'string'
+                LAT: 'float'
+                LONG: 'float'
+                X: 'float'
+                Y: 'float'
           path: taranaki-basin-curated-well-logs/coords.csv
