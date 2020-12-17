@@ -30,7 +30,7 @@ datasets:
       subdatasets:
         train:
           name: MC Query Train
-          description: Training set containing sentences retrieved by MC query
+          description: Sentences retrieved by the q_mc query on 70 train topics
           format:
             id: csv
             options:
@@ -45,7 +45,7 @@ datasets:
           path: q_mc_train.csv
         heldout:
           name: MC Query Heldout
-          description: Heldout set containing sentences retrieved by MC query
+          description: Sentences retrieved by the q_mc query on 30 heldout topics
           format:
             id: csv
             options:
@@ -60,7 +60,7 @@ datasets:
           path: q_mc_heldout.csv
         test:
           name: MC Query Test
-          description: Test set containing sentences retrieved by MC query
+          description: Sentences retrieved by the q_mc query on 50 test topics
           format:
             id: csv
             options:
@@ -73,9 +73,9 @@ datasets:
                 prefix: 'string'
                 url: 'string'
           path: q_mc_test.csv
-        dnn_test:
+        test_set:
           name: DNN Test
-          description: Dataset containing DNN score of each sentence and its gold label
+          description: Top predictions of our system along with their labels
           format:
             id: csv
             options:
@@ -102,7 +102,7 @@ datasets:
       subdatasets:
         unigrams:
           name: Unigrams
-          description: "Unigram Wikipedia Article Titles with their abstractness score"
+          description: "Concepts and abstractness scores for unigrams (single worded concepts)"
           format: csv
           options:
             columns:
@@ -111,7 +111,7 @@ datasets:
           path: prediction_unigrams.csv
         bigrams:
           name: Bigrams
-          description: "Bigram Wikipedia Article Titles with their abstractness score"
+          description: "Concepts and abstractness scores for bigrams (two word concepts)"
           format: csv
           options:
             columns:
@@ -120,7 +120,7 @@ datasets:
           path: prediction_bigrams.csv
         trigrams:
           name: Trigrams
-          description: "Trigram Wikipedia Article Titles with their abstractness score"
+          description: "Concepts and abstractness scores for trigrams (three word concepts)"
           format: csv
           options:
             columns:
@@ -197,7 +197,7 @@ datasets:
       subdatasets:
         unigrams:
           name: Unigrams Sentiment Lexicon
-          description: Unigrams with their sentiment score
+          description: "The unigrams sentiment lexicon"
           format:
             id: csv
             options:
@@ -208,7 +208,7 @@ datasets:
           path: LEXICON_UG.txt
         bigrams:
           name: Bigrams Sentiment Lexicon
-          description: Bigrams with their POS tag and sentiment score
+          description: "The bigrams sentiment lexicon"
           format:
             id: csv
             options:
