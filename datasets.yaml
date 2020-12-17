@@ -164,32 +164,6 @@ datasets:
           description: A full version of the raw dataset. Used to train MAX model – Named Entity Tagger.
           format: txt
           path: groningen_meaning_bank_modified/gmb_subset_full.txt
-  wikitext103:
-    "1.0.1":
-      name: WikiText-103
-      published: 2020-03-17
-      homepage: https://developer.ibm.com/exchanges/data/all/wikitext-103/
-      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikitext-103/1.0.1/wikitext-103.tar.gz
-      sha512sum: c8186919aa1840af6b734ea41abc580574ea8efe2fafda220f5d01002464d17566d84be5199b875136c9593f0e0678fb5d7c84bb2231de8b4151cb9c83fa2109
-      license: cc_by_30
-      estimated_size: 181M
-      description: "The WikiText-103 dataset is a collection of over 100 million tokens extracted from the set of verified ‘Good’ and ‘Featured’ articles on Wikipedia."
-      subdatasets:
-        train:
-          name: Train Tokens
-          description: Tokens in the training subset
-          format: txt
-          path: wikitext-103/wiki.train.tokens
-        valid:
-          name: Validation Tokens
-          description: Tokens in the validation subset
-          format: txt
-          path: wikitext-103/wiki.valid.tokens
-        test:
-          name: Test Tokens
-          description: Tokens in the testing subset
-          format: txt
-          path: wikitext-103/wiki.test.tokens
   noaa_jfk:
     "1.1.4":
       name: NOAA Weather Data – JFK Airport
@@ -370,3 +344,29 @@ datasets:
                 concept_2_uri: 'string'
                 train_test: 'string'
           path: WORD.csv
+  wikitext103:
+    "1.0.1":
+      name: WikiText-103
+      published: 2020-03-17
+      homepage: https://developer.ibm.com/exchanges/data/all/wikitext-103/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikitext-103/1.0.1/wikitext-103.tar.gz
+      sha512sum: c8186919aa1840af6b734ea41abc580574ea8efe2fafda220f5d01002464d17566d84be5199b875136c9593f0e0678fb5d7c84bb2231de8b4151cb9c83fa2109
+      license: cc_by_30
+      estimated_size: 181M
+      description: "The WikiText-103 dataset is a collection of over 100 million tokens extracted from the set of verified ‘Good’ and ‘Featured’ articles on Wikipedia."
+      subdatasets:
+        train:
+          name: Train Tokens
+          description: Tokens in the training subset
+          format: txt
+          path: wikitext-103/wiki.train.tokens
+        valid:
+          name: Validation Tokens
+          description: Tokens in the validation subset
+          format: txt
+          path: wikitext-103/wiki.valid.tokens
+        test:
+          name: Test Tokens
+          description: Tokens in the testing subset
+          format: txt
+          path: wikitext-103/wiki.test.tokens
