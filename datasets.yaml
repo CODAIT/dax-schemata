@@ -172,3 +172,57 @@ datasets:
               columns:
                 DATE: 'datetime'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
+  taranaki-basin-curated-well-logs:
+    "1.0.0":
+      name: Taranaki Basin Curated Well Logs
+      published: 2020-05-10
+      homepage: https://developer.ibm.com/exchanges/data/all/taranaki-basin-curated-well-logs/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-taranaki-basin-curated-well-logs/1.0.0/taranaki-basin-curated-well-logs.tar.gz
+      sha512sum: 6f1a8e051806b934e650dca7f69c58505635303ea3a47bfa36da175056669e5a09057fac8895d4f01db74a547c63ce6c6b8959854f10d6265cda71c377d06183
+      license: cdla_sharing
+      estimated_size: 873M
+      description: "A dataset containing well logs curated from the 2016 New Zealand Petroleum Exploration public data pack."
+      subdatasets:
+        logs:
+          name: Taranaki Basin Curated Well Logs
+          description: Log information
+          format:
+            id: csv
+            options:
+              columns:
+                BS: 'float'
+                CALI: 'float'
+                DENS: 'float'
+                DRHO: 'float'
+                DTC: 'float'
+                GR: 'float'
+                NEUT: 'float'
+                PEF: 'float'
+                RESD: 'float'
+                RESM: 'float'
+                RESS: 'float'
+                SP: 'float'
+                TEMP: 'float'
+                TENS: 'float'
+                X: 'float'
+                Y: 'float'
+                Z: 'float'
+                DEPT: 'float'
+                ONSHORE: 'boolean'
+                DIRSURVEY: 'boolean'
+                WELLNAME: 'string'
+                FORMATION: 'string'
+          path: taranaki-basin-curated-well-logs/logs.csv
+        coordinates:
+          name: Taranaki Basin Curated Well Coordinates
+          description: Coordinates of the wells
+          format:
+            id: csv
+            options:
+              columns:
+                WELL_NAME: 'string'
+                LAT: 'float'
+                LONG: 'float'
+                X: 'float'
+                Y: 'float'
+          path: taranaki-basin-curated-well-logs/coords.csv
