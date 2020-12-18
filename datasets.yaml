@@ -172,6 +172,48 @@ datasets:
               columns:
                 DATE: 'datetime'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
+  sentiment_compositions_lexicon:
+    "1.0.2":
+      name: IBM Debater® Sentiment Compositions Lexicon
+      published: 2019-10-01
+      homepage: https://developer.ibm.com/exchanges/data/all/sentiment-composition-lexicons/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-sentiment-composition-lexicons/1.0.2/sentiment-composition-lexicons.tar.gz
+      sha512sum: 550da933b668270d890a4e12160202671894c357927e52250500e97b78965d7f3d4506396f9f21f50683a2fc54a4af5922f7fdd0ac7f01e4b5a2f1068451a519
+      license: cc_by_sa_30
+      estimated_size: 10M
+      description: "A dataset on the sentiment of phrases from the interaction between its constituents."
+      subdatasets:
+        unigrams:
+          name: Unigrams Sentiment Lexicon
+          description: "The unigrams sentiment lexicon."
+          format:
+            id: csv
+            options:
+              delimiter: ' '
+              columns:
+                UNIGRAM: 'string'
+                SENTIMENT_SCORE: 'float'
+          path: LEXICON_UG.txt
+        bigrams:
+          name: Bigrams Sentiment Lexicon
+          description: "The bigrams sentiment lexicon."
+          format:
+            id: csv
+            options:
+              delimiter: ' '
+              columns:
+                BIGRAM: 'string'
+                POS_TAG: 'string'
+                SENTIMENT_SCORE: 'float'
+          path: LEXICON_BG.txt
+        semantic_classes:
+          name: Semantic Classes
+          description: "The composition lexicons for reversers, propagators, and dominators."
+          format:
+            id: xlsx
+            options:
+              columns:
+                classes: 'string'
   taranaki-basin-curated-well-logs:
     "1.0.0":
       name: Taranaki Basin Curated Well Logs
