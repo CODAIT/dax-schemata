@@ -46,5 +46,5 @@ for name, versions in pydax.list_all_datasets().items():
     assert len(versions) > 0
     for version in versions:
         # Print dataset info. This also examines relevant portion in license.yaml
-        print(pydax.get_dataset_metadata(name, version, human=True), end='\n\n')
+        print(pydax.describe_dataset(name, version), end='\n\n')
         pydax.load_dataset(name=name, version=version, subdatasets=None)
