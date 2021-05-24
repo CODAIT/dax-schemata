@@ -32,7 +32,7 @@ datasets:
           name: MC Query Train
           description: Sentences retrieved by the q_mc query on 70 train topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -47,7 +47,7 @@ datasets:
           name: MC Query Heldout
           description: Sentences retrieved by the q_mc query on 30 heldout topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -62,7 +62,7 @@ datasets:
           name: MC Query Test
           description: Sentences retrieved by the q_mc query on 50 test topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -77,7 +77,7 @@ datasets:
           name: DNN Test
           description: Top predictions of our system along with their labels
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -103,7 +103,7 @@ datasets:
         unigrams:
           name: Unigrams
           description: "Concepts and abstractness scores for unigrams (single worded concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -112,7 +112,7 @@ datasets:
         bigrams:
           name: Bigrams
           description: "Concepts and abstractness scores for bigrams (two word concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -121,7 +121,7 @@ datasets:
         trigrams:
           name: Trigrams
           description: "Concepts and abstractness scores for trigrams (three word concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -142,7 +142,7 @@ datasets:
           name: Expert in the Loop AI Full Dataset
           description: Full version of the Expert in the Loop AI dataset.
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 Sequence: 'string'
@@ -162,7 +162,7 @@ datasets:
         gmb_subset_full:
           name: GMB Subset Full
           description: A full version of the raw dataset. Used to train MAX model – Named Entity Tagger.
-          format: txt
+          format: text/plain
           path: groningen_meaning_bank_modified/gmb_subset_full.txt
   noaa_jfk:
     "1.1.4":
@@ -179,7 +179,7 @@ datasets:
           name: Cleaned JFK Weather Data
           description: Cleaned version of the JFK weather data.
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 DATE: 'datetime'
@@ -199,7 +199,7 @@ datasets:
           name: Taranaki Basin Curated Well Logs
           description: Log information
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 BS: 'float'
@@ -229,7 +229,7 @@ datasets:
           name: Taranaki Basin Curated Well Coordinates
           description: Coordinates of the wells
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 WELL_NAME: 'string'
@@ -253,7 +253,7 @@ datasets:
           name: IBM Debater® Thematic Clustering of Sentences
           description: IBM Debater® Thematic Clustering of Sentences complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 article_title: 'string'
@@ -276,7 +276,7 @@ datasets:
           name: IBM Debater® Wikipedia Category Stance Dataset
           description: IBM Debater® Wikipedia Category Stance complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 Label: 'string'
@@ -298,7 +298,7 @@ datasets:
         full:
           name: IBM Debater® Wikipedia Oriented Relatedness complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               encoding: 'ISO-8859-1'
               columns:
@@ -324,15 +324,15 @@ datasets:
         train:
           name: Train Tokens
           description: Tokens in the training subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.train.tokens
         valid:
           name: Validation Tokens
           description: Tokens in the validation subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.valid.tokens
         test:
           name: Test Tokens
           description: Tokens in the testing subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.test.tokens
