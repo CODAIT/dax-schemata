@@ -14,31 +14,7 @@
 # limitations under the License.
 #
 
-last_updated: 2020-10-14
+last_updated: 2021-06-17
 
-licenses:
-  cdla_sharing:
-    name: Community Data License Agreement – Sharing, Version 1.0 (CDLA-Sharing-1.0)
-    commercial_use: true
-    copyleft: true  # https://en.wikipedia.org/wiki/Copyleft
-    url: https://cdla.io/sharing-1-0/
-  cdla_permissive:
-    name: Community Data License Agreement – Permissive, Version 1.0 (CDLA-Permissive-1.0)
-    commercial_use: true
-    copyleft: false
-    url: https://cdla.io/permissive-1-0/
-  cc_by_40:
-    name: Creative Commons Attribution 4.0 International (CC BY 4.0)
-    commercial_use: true
-    copyleft: false
-    url: https://creativecommons.org/licenses/by/4.0/
-  cc_by_30:
-    name: Creative Commons Attribution 3.0 International (CC BY 3.0)
-    commercial_use: true
-    copyleft: false
-    url: https://creativecommons.org/licenses/by/3.0/
-  cc_by_sa_30:
-    name: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
-    commercial_use: true
-    copyleft: false
-    url: https://creativecommons.org/licenses/by-sa/3.0/
+# We mostly defer to https://spdx.org/licenses/
+licenses: {}
