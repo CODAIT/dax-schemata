@@ -24,9 +24,9 @@ import pydax
 
 
 pydax.init(
-    DATASET_SCHEMA_URL='datasets.yaml',
-    FORMAT_SCHEMA_URL='formats.yaml',
-    LICENSE_SCHEMA_URL='licenses.yaml'
+    DATASET_SCHEMA_FILE_URL='datasets.yaml',
+    FORMAT_SCHEMA_FILE_URL='formats.yaml',
+    LICENSE_SCHEMA_FILE_URL='licenses.yaml'
 )
 
 with open('datasets.yaml') as f:

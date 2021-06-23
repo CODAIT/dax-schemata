@@ -15,7 +15,7 @@
 #
 
 api_name: com.ibm.pydax.v1
-last_updated: 2020-10-08
+last_updated: 2021-06-17
 datasets:
   claim_sentences_search:
     "1.0.2":
@@ -24,7 +24,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/claim-sentences-search/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-claim-sentences-search/1.0.2/claim-sentences-search.tar.gz
       sha512sum: ca075c45338ab261d11d60bcd11bd52041f68078a3be617171caaf6291c24a72535500706be7be3b4b1dea5d93f7e1d739e4393de0fdeba7eacd019e9f70171b
-      license: cc_by_sa_30
+      license: CC-BY-SA-3.0
       estimated_size: 571M
       description: "Sentences from Wikipedia together with their topic."
       subdatasets:
@@ -32,7 +32,7 @@ datasets:
           name: MC Query Train
           description: Sentences retrieved by the q_mc query on 70 train topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -47,7 +47,7 @@ datasets:
           name: MC Query Heldout
           description: Sentences retrieved by the q_mc query on 30 heldout topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -62,7 +62,7 @@ datasets:
           name: MC Query Test
           description: Sentences retrieved by the q_mc query on 50 test topics
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -77,7 +77,7 @@ datasets:
           name: DNN Test
           description: Top predictions of our system along with their labels
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 id: 'string'
@@ -96,14 +96,14 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/concept-abstractness/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-concept-abstractness/1.0.2/concept-abstractness.tar.gz
       sha512sum: 25cb76c0a8fdfc9cae7e050d4c2492bf055f97a20fa85690b9aaf7dcf965a705fc89e32aed7fbb6d418432e5368cb06fc3bb0f1ab85807fec8aef9df3965cc06
-      license: cc_by_sa_30
+      license: CC-BY-SA-3.0
       estimated_size: 3.6M
       description: "A set of concepts from Wikipedia rated for their degree of abstractness."
       subdatasets:
         unigrams:
           name: Unigrams
           description: "Concepts and abstractness scores for unigrams (single worded concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -112,7 +112,7 @@ datasets:
         bigrams:
           name: Bigrams
           description: "Concepts and abstractness scores for bigrams (two word concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -121,7 +121,7 @@ datasets:
         trigrams:
           name: Trigrams
           description: "Concepts and abstractness scores for trigrams (three word concepts)"
-          format: csv
+          format: table/csv
           options:
             columns:
               Concept: 'string'
@@ -134,7 +134,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-expert-in-the-loop-ai-polymer-discovery/1.0.0/expert-in-the-loop-ai-polymer-discovery.tar.gz
       sha512sum: a87db5c8a30288fd2dc41c1189125378c0700035f7c3a2ca6c71bfbc4b955c15f2bb4f955d2b4a3e95b06ee3719fbd1082c79b299cf688da7af6baedb333de4c
-      license: cdla_sharing
+      license: CDLA-Sharing-1.0
       estimated_size: 14M
       description: "Candidate monomers for ring-opening polymerization adjudicated/labelled for workability."
       subdatasets:
@@ -142,7 +142,7 @@ datasets:
           name: Expert in the Loop AI Full Dataset
           description: Full version of the Expert in the Loop AI dataset.
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 Sequence: 'string'
@@ -155,14 +155,14 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/groningen-meaning-bank/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-groningen-meaning-bank-modified/1.0.2/groningen-meaning-bank-modified.tar.gz
       sha512sum: 4b0e6c445bf5be0573ae411f8e0ba307b884300ab6b5473ea0d455dd82b8cf4dc06fb77a9a606850f3b283357f22fd516e91850cea7e45de19ce5625fda2c001
-      license: cdla_sharing
+      license: CDLA-Sharing-1.0
       estimated_size: 10M
       description: "A dataset of multi-sentence texts, together with annotations for parts-of-speech, named entities, lexical categories and other natural language structural phenomena."
       subdatasets:
         gmb_subset_full:
           name: GMB Subset Full
           description: A full version of the raw dataset. Used to train MAX model – Named Entity Tagger.
-          format: txt
+          format: text/plain
           path: groningen_meaning_bank_modified/gmb_subset_full.txt
   noaa_jfk:
     "1.1.4":
@@ -171,7 +171,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/jfk-weather-data/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-noaa-weather-data-jfk-airport/1.1.4/noaa-weather-data-jfk-airport.tar.gz
       sha512sum: e3f27a8fcc0db5289df356e3f48aef6df56236798d5b3ae3889d358489ec6609d2d797e4c4932b86016d2ce4a379ac0a0749b6fb2c293ebae4e585ea1c8422ac
-      license: cdla_sharing
+      license: CDLA-Sharing-1.0
       estimated_size: 3.2M
       description: "The NOAA JFK dataset contains 114,546 hourly observations of various local climatological variables (including visibility, temperature, wind speed and direction, humidity, dew point, and pressure). The data was collected by a NOAA weather station located at the John F. Kennedy International Airport in Queens, New York."
       subdatasets:
@@ -179,7 +179,7 @@ datasets:
           name: Cleaned JFK Weather Data
           description: Cleaned version of the JFK weather data.
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 DATE: 'datetime'
@@ -191,7 +191,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/taranaki-basin-curated-well-logs/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-taranaki-basin-curated-well-logs/1.0.0/taranaki-basin-curated-well-logs.tar.gz
       sha512sum: 6f1a8e051806b934e650dca7f69c58505635303ea3a47bfa36da175056669e5a09057fac8895d4f01db74a547c63ce6c6b8959854f10d6265cda71c377d06183
-      license: cdla_sharing
+      license: CDLA-Sharing-1.0
       estimated_size: 873M
       description: "A dataset containing well logs curated from the 2016 New Zealand Petroleum Exploration public data pack."
       subdatasets:
@@ -199,7 +199,7 @@ datasets:
           name: Taranaki Basin Curated Well Logs
           description: Log information
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 BS: 'float'
@@ -229,7 +229,7 @@ datasets:
           name: Taranaki Basin Curated Well Coordinates
           description: Coordinates of the wells
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 WELL_NAME: 'string'
@@ -245,7 +245,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/thematic-clustering-of-sentences/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-thematic-clustering-of-sentences/1.0.2/thematic-clustering-of-sentences.tar.gz
       sha512sum: 08a3f1a9dc06083eb51874e90d7241f67b676af2cbc28fe6a312694051f53391fc95de70fdcdce404de3578fa389558220ea38d34f70265ed88220d0b14f1aba
-      license: cc_by_sa_30
+      license: CC-BY-SA-3.0
       estimated_size: 10.6M
       description: "A benchmark of sentence-clustering based on the partition of Wikipedia articles into sections."
       subdatasets:
@@ -253,7 +253,7 @@ datasets:
           name: IBM Debater® Thematic Clustering of Sentences
           description: IBM Debater® Thematic Clustering of Sentences complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 article_title: 'string'
@@ -268,7 +268,7 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/wikipedia-category-stance/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikipedia-category-stance/1.0.2/wikipedia-category-stance.tar.gz
       sha512sum: a8e056737699a5a52ef5b7bd91f13f9a672e091b7636010cdcc0ba9d34c322dd761c50bdda01fe988ed6650470f9410ef9f8789e54c4d90124606f7a889f57b4
-      license: cc_by_30
+      license: CC-BY-3.0
       estimated_size: 525K
       description: "Wikipedia categories and lists annotated for stance (Pro/Con) towards the concepts"
       subdatasets:
@@ -276,7 +276,7 @@ datasets:
           name: IBM Debater® Wikipedia Category Stance Dataset
           description: IBM Debater® Wikipedia Category Stance complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               columns:
                 Label: 'string'
@@ -291,14 +291,14 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/wikipedia-oriented-relatedness/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikipedia-oriented-relatedness/1.0.2/wikipedia-oriented-relatedness.tar.gz
       sha512sum: 270f0bb4711acff8f88e9ce10403a72ce13b8ad21205f61d41c17c520b1d30bccefcd2312db92c80ec525a8e8a926b2ff77f58d1e95efb0b17b945c8f5de4e7f
-      license: cc_by_sa_30
+      license: CC-BY-SA-3.0
       estimated_size: 3.4M
       description: "Pairs of concepts from Wikipedia scored for their level of relatedness."
       subdatasets:
         full:
           name: IBM Debater® Wikipedia Oriented Relatedness complete dataset
           format:
-            id: csv
+            id: table/csv
             options:
               encoding: 'ISO-8859-1'
               columns:
@@ -317,22 +317,22 @@ datasets:
       homepage: https://developer.ibm.com/exchanges/data/all/wikitext-103/
       download_url: https://dax-cdn.cdn.appdomain.cloud/dax-wikitext-103/1.0.1/wikitext-103.tar.gz
       sha512sum: c8186919aa1840af6b734ea41abc580574ea8efe2fafda220f5d01002464d17566d84be5199b875136c9593f0e0678fb5d7c84bb2231de8b4151cb9c83fa2109
-      license: cc_by_30
+      license: CC-BY-3.0
       estimated_size: 181M
       description: "The WikiText-103 dataset is a collection of over 100 million tokens extracted from the set of verified ‘Good’ and ‘Featured’ articles on Wikipedia."
       subdatasets:
         train:
           name: Train Tokens
           description: Tokens in the training subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.train.tokens
         valid:
           name: Validation Tokens
           description: Tokens in the validation subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.valid.tokens
         test:
           name: Test Tokens
           description: Tokens in the testing subset
-          format: txt
+          format: text/plain
           path: wikitext-103/wiki.test.tokens
