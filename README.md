@@ -1,7 +1,7 @@
 # DAX Schemata
 
 This is the repository that we maintain the default DAX schema files for
-[PyDAX](https://github.com/codait/pydax).
+[ParData](https://github.com/codait/pardata).
 
 To run tests locally, run:
 
@@ -10,5 +10,5 @@ To run tests locally, run:
 
     # lint tests
     $ tox -e lint
-    # pydax tests
-    $ tox -e pydax
+    # pardata tests
+    $ tox -e pardata
