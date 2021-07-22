@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-api_name: com.ibm.pydax.v1
+api_name: com.ibm.pardata.v1
 last_updated: 2021-06-17
 datasets:
   claim_sentences_search:

@@ -20,10 +20,10 @@
 
 import yaml
 
-import pydax
+import pardata
 
 
-pydax.init(
+pardata.init(
     DATASET_SCHEMA_FILE_URL='datasets.yaml',
     FORMAT_SCHEMA_FILE_URL='formats.yaml',
     LICENSE_SCHEMA_FILE_URL='licenses.yaml'
@@ -32,19 +32,19 @@ pydax.init(
 with open('datasets.yaml') as f:
     datasets = yaml.safe_load(f)
 
-# Datasets name are the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
+# Datasets name are the same from the schema files. This helps ensure that ParData doesn't miss any dataset during the
 # test.
-assert frozenset(datasets['datasets']) == frozenset(pydax.list_all_datasets())
+assert frozenset(datasets['datasets']) == frozenset(pardata.list_all_datasets())
 # Sanity check. In case of all tests being skipped because of a minor error such as in formatting.
-assert len(pydax.list_all_datasets()) > 0
+assert len(pardata.list_all_datasets()) > 0
 
-for name, versions in pydax.list_all_datasets().items():
-    # Versions must be the same from the schema files. This helps ensure that PyDAX doesn't miss any dataset during the
-    # test.
+for name, versions in pardata.list_all_datasets().items():
+    # Versions must be the same from the schema files. This helps ensure that ParData doesn't miss any dataset during
+    # the test.
     assert frozenset(datasets['datasets'][name]) == frozenset(versions)
     # Sanity check. In case of all tests being skipped because of a minor error such as in formatting.
     assert len(versions) > 0
     for version in versions:
         # Print dataset info. This also examines relevant portion in license.yaml
-        print(pydax.describe_dataset(name, version), end='\n\n')
-        pydax.load_dataset(name=name, version=version, subdatasets=None)
+        print(pardata.describe_dataset(name, version), end='\n\n')
+        pardata.load_dataset(name=name, version=version, subdatasets=None)
