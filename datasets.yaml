@@ -127,6 +127,28 @@ datasets:
               Concept: 'string'
               Score: 'float'
           path: prediction_trigrams.csv
+  covid19_questions:
+    "1.0.0":
+      name: COVID-19 Questions
+      published: 2020-10-01
+      homepage: https://developer.ibm.com/exchanges/data/all/cqa/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-covid-19-questions/1.0.0/covid-19-questions.tar.gz
+      sha512sum: f0cd0689b51277e14361dcd110ad6268fd88c8bdd9d6254f15953e539d0f847bbfd4981d1cc5cf0045fb1c159938e30d0b4e7ab68c20ccec5ee7db6ff3622b41
+      license: CDLA-Sharing-1.0
+      estimated_size: 49K
+      description: "Categorized questions which were frequently asked by the public during the COVID-19 pandemic period."
+      subdatasets:
+        full:
+          name: COVID-19 Questions
+          description: "Full dataset."
+          format:
+            id: table/csv
+            options:
+              columns:
+                label: 'string'
+                utterance: 'string'
+              delimiter: "\t"
+          path: covid-19-questions/covid_19_questions.tsv
   expert_in_the_loop_ai_polymer_discovery:
     "1.0.0":
       name: Expert in the Loop AI – Polymer Discovery
