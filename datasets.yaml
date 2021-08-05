@@ -127,7 +127,7 @@ datasets:
               Concept: 'string'
               Score: 'float'
           path: prediction_trigrams.csv
-  expert-in-the-loop-ai-polymer-discovery:
+  expert_in_the_loop_ai_polymer_discovery:
     "1.0.0":
       name: Expert in the Loop AI – Polymer Discovery
       published: 2020-06-15
@@ -184,7 +184,7 @@ datasets:
               columns:
                 DATE: 'datetime'
           path: noaa-weather-data-jfk-airport/jfk_weather_cleaned.csv
-  taranaki-basin-curated-well-logs:
+  taranaki_basin_curated_well_logs:
     "1.0.0":
       name: Taranaki Basin Curated Well Logs
       published: 2020-05-10
