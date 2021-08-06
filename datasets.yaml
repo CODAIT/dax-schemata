@@ -283,6 +283,274 @@ datasets:
                 X: 'float'
                 Y: 'float'
           path: taranaki-basin-curated-well-logs/coords.csv
+  tensorflow_speech_commands:
+    "1.0.0":
+      name: TensorFlow Speech Commands
+      published: 2020-03-17
+      homepage: https://developer.ibm.com/exchanges/data/all/speech-commands/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-tensorflow-speech-commands/1.0.1/tensorflow-speech-commands.tar.gz
+      sha512sum: 1c4b41d9f719454f4155b4540e8aec0b1c5bfd555974f4e9e2253dd4e52b395ecc239f26a16a86ef047d1aac78a9ac1fe41f9c559a1d3478d951e4f078bb0fb8
+      license: CC-BY-4.0
+      estimated_size: 1.49G
+      description: "TensorFlow Speech Command dataset is a set of one-second .wav audio files, each containing a single spoken English word. These words are from a small set of commands, and are spoken by a variety of different speakers. 20 of the words are core words, while 10 words are auxiliary words that could act as tests for algorithms in ignoring speeches that do not contain triggers. Included along with the 30 words is a collection of background noise audio files. The dataset was originally designed for limited vocabulary speech recognition tasks. The audio clips were originally collected by Google, and recorded by volunteers in uncontrolled locations around the world."
+      subdatasets:
+        "one":
+          name: "one"
+          description: "one"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/one/.*\\.wav"
+        "yes":
+          name: "yes"
+          description: "yes"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/yes/.*\\.wav"
+        "five":
+          name: "five"
+          description: "five"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/five/.*\\.wav"
+        "zero":
+          name: "zero"
+          description: "zero"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/zero/.*\\.wav"
+        "happy":
+          name: "happy"
+          description: "happy"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/happy/.*\\.wav"
+        "down":
+          name: "down"
+          description: "down"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/down/.*\\.wav"
+        "four":
+          name: "four"
+          description: "four"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/four/.*\\.wav"
+        "dog":
+          name: "dog"
+          description: "dog"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/dog/.*\\.wav"
+        "stop":
+          name: "stop"
+          description: "stop"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/stop/.*\\.wav"
+        "wow":
+          name: "wow"
+          description: "wow"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/wow/.*\\.wav"
+        "no":
+          name: "no"
+          description: "no"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/no/.*\\.wav"
+        "house":
+          name: "house"
+          description: "house"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/house/.*\\.wav"
+        "three":
+          name: "three"
+          description: "three"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/three/.*\\.wav"
+        "bird":
+          name: "bird"
+          description: "bird"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/bird/.*\\.wav"
+        "eight":
+          name: "eight"
+          description: "eight"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/eight/.*\\.wav"
+        "two":
+          name: "two"
+          description: "two"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/two/.*\\.wav"
+        "cat":
+          name: "cat"
+          description: "cat"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/cat/.*\\.wav"
+        "off":
+          name: "off"
+          description: "off"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/off/.*\\.wav"
+        "sheila":
+          name: "sheila"
+          description: "sheila"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/sheila/.*\\.wav"
+        "six":
+          name: "six"
+          description: "six"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/six/.*\\.wav"
+        "tree":
+          name: "tree"
+          description: "tree"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/tree/.*\\.wav"
+        "nine":
+          name: "nine"
+          description: "nine"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/nine/.*\\.wav"
+        "up":
+          name: "up"
+          description: "up"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/up/.*\\.wav"
+        "marvin":
+          name: "marvin"
+          description: "marvin"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/marvin/.*\\.wav"
+        "seven":
+          name: "seven"
+          description: "seven"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/seven/.*\\.wav"
+        "right":
+          name: "right"
+          description: "right"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/right/.*\\.wav"
+        "on":
+          name: "on"
+          description: "on"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/on/.*\\.wav"
+        "go":
+          name: "go"
+          description: "go"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/go/.*\\.wav"
+        "_background_noise_":
+          name: "_background_noise_"
+          description: "_background_noise_"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/_background_noise_/.*\\.wav"
+        "left":
+          name: "left"
+          description: "left"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/left/.*\\.wav"
+        "TensorFlow-Speech-Commands":
+          name: "TensorFlow-Speech-Commands"
+          description: "TensorFlow-Speech-Commands"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/TensorFlow-Speech-Commands/.*\\.wav"
+        "bed":
+          name: "bed"
+          description: "bed"
+          format:
+            id: audio/wav
+          path:
+            type: regex
+            value: "TensorFlow-Speech-Commands/bed/.*\\.wav"
+
   thematic_clustering_of_sentences:
     "1.0.2":
       name: IBM Debater® Thematic Clustering of Sentences
