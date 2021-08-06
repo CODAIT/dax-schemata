@@ -18,6 +18,9 @@
 
 # This scripts tests all files in CODAIT/dax-schemata. It shouldn't report any error.
 
+from pathlib import Path
+import shutil
+
 import yaml
 
 import pardata
@@ -48,3 +51,5 @@ for name, versions in pardata.list_all_datasets().items():
         # Print dataset info. This also examines relevant portion in license.yaml
         print(pardata.describe_dataset(name, version), end='\n\n')
         pardata.load_dataset(name=name, version=version, subdatasets=None)
+        # Delete all loaded data
+        shutil.rmtree(Path.home() / '.pardata/data')
