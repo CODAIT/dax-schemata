@@ -170,6 +170,29 @@ datasets:
                 Sequence: 'string'
                 Adjudication: 'string'
           path: expert-in-the-loop-ai-polymer-discovery/EITLAI_CyclicLactones_ROP_v1.csv
+  fashion_mnist:
+    "1.0.0":
+      name: Fashion-MNIST
+      published: 2019-08-22
+      homepage: https://developer.ibm.com/exchanges/data/all/fashion-mnist/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-fashion-mnist/1.0.2/fashion-mnist.tar.gz
+      sha512sum: dd89a49011582fd9c6825a74a8af0a4d72cdb8a8a3bc9e300c7f0bf92cf83a251af58ef24cf66ec5047c84c17f1d607bb3c648a6dbb89e1d4935a654ea6befc6
+      license: MIT
+      estimated_size: 37M
+      description: "The Fashion-MNIST dataset contains 60,000 training images (and 10,000 test images) of fashion and clothing items, taken from 10 classes. Each image is a standardized 28×28 size in grayscale (784 total pixels). Fashion-MNIST was created by Zalando as a compatible replacement for the original MNIST dataset of handwritten digits."
+      subdatasets:
+        train:
+          name: Training dataset
+          description: Training dataset in Fashion-MNIST.
+          format:
+            id: table/csv
+          path: fashion-mnist_train.csv
+        test:
+          name: Testing dataset
+          description: Testing dataset in Fashion-MNIST.
+          format:
+            id: table/csv
+          path: fashion-mnist_test.csv
   gmb:
     "1.0.2":
       name: Groningen Meaning Bank Modified
