@@ -26,9 +26,9 @@ datasets:
       sha512sum: 030d2e2d74a4dca03f5f471563226f68b9994ffb1cff2aaf9a50d39695f8c49ea477e87cf4981a09c7fdba8e1967b119e6f6bf52113d9cc1c09856c5e3cef064
       license: CDLA-Sharing-1.0
       estimated_size: 58K
-      description: "LAX to JFK flight information from the US Bureau of Transportation Statistics."
+      description: "Information about flights from LAX to JFK that were reported to the US Bureau of Transportation Statistics."
       subdatasets:
-        full:
+        lax_to_jfk:
           name: LAX to JFK
           description: "LAX to JFK sample dataset."
           format:
