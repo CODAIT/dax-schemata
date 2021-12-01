@@ -15,8 +15,28 @@
 #
 
 api_name: com.ibm.pardata.v1
-last_updated: 2021-06-17
+last_updated: 2021-11-30
 datasets:
+  airline:
+    "1.0.0":
+      name: Airline Reporting Carrier On-Time Performance datasets
+      published: 2020-06-25
+      homepage: https://developer.ibm.com/exchanges/data/all/airline/
+      download_url: https://dax-cdn.cdn.appdomain.cloud/dax-airline/1.0.1/lax_to_jfk.tar.gz
+      sha512sum: 030d2e2d74a4dca03f5f471563226f68b9994ffb1cff2aaf9a50d39695f8c49ea477e87cf4981a09c7fdba8e1967b119e6f6bf52113d9cc1c09856c5e3cef064
+      license: CDLA-Sharing-1.0
+      estimated_size: 58K
+      description: "Information about flights from LAX to JFK that were reported to the US Bureau of Transportation Statistics."
+      subdatasets:
+        lax_to_jfk:
+          name: LAX to JFK
+          description: "LAX to JFK flights sample dataset."
+          format:
+            id: table/csv
+            options:
+              columns:
+                FlightDate: 'datetime'
+          path: lax_to_jfk/lax_to_jfk.csv
   claim_sentences_search:
     "1.0.2":
       name: IBM Debater® Claim Sentences Search
