@@ -30,7 +30,7 @@ datasets:
       subdatasets:
         lax_to_jfk:
           name: LAX to JFK
-          description: "LAX to JFK filghts sample dataset."
+          description: "LAX to JFK flights sample dataset."
           format:
             id: table/csv
             options:
