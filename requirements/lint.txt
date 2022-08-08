@@ -1,2 +1,2 @@
-flake8 == 4.0.1
+flake8 == 5.0.4
 yamllint == 1.26.3
